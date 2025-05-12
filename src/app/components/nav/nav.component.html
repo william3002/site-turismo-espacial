@@ -1,0 +1,62 @@
+<header class="flex items-center justify-between w-full p-4 px-5 text-white bg-transparent z-40 relative md:px-0">
+  <img class="w-10 md:w-14 ps-2 md:ps-5 lg:ps-10 lg:w-24" src="logo.svg" alt="Logo" />
+
+  <!-- Botão hambúrguer -->
+  <button class="md:hidden" (click)="menuAberto = true">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <!-- Menu desktop -->
+  <nav
+    class="hidden backdrop-blur-3xl backdrop-filter backdrop-opacity-95 space-x-4 gap-6 text-white md:flex md:px-7 xl:space-x-10 xl:px-16">
+    <a routerLink="/home" class="py-3 md:py-5 uppercase xl:py-8 transition-all active:text-gray-500"
+      routerLinkActive="border-b-2 border-white">
+      <span
+          class="text-gray-500">00</span> home
+    </a>
+    <a routerLink="/destination" class="py-3 md:py-5 uppercase xl:py-8 transition-all active:text-gray-500"
+      routerLinkActive="border-b-2 border-white">
+      <span
+          class="text-gray-500">01</span> destination
+    </a>
+    <a routerLink="/crew" class="py-3 md:py-5 uppercase xl:py-8 transition-all active:text-gray-500"
+      routerLinkActive="border-b-2 border-white">
+      <span
+          class="text-gray-500">02</span> crew
+    </a>
+    <a routerLink="/technology" class="py-3 md:py-5 uppercase xl:py-8 transition-all active:text-gray-500"
+      routerLinkActive="border-b-2 border-white">
+      <span
+          class="text-gray-500">03</span> technology
+    </a>
+  </nav>
+</header>
+
+<!-- Menu lateral mobile com botão de fechar -->
+<div
+  class="fixed top-0 right-0 h-full w-64 bg-black text-white transform transition-transform duration-300 ease-in-out z-50 md:hidden"
+  [ngClass]="{ 'translate-x-0': menuAberto, 'translate-x-full': !menuAberto }">
+  <div class="p-4 flex flex-col gap-4  uppercase text-gray-300">
+    <!-- Botão de fechar -->
+    <button class="self-end mb-4" (click)="menuAberto = false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Links -->
+    <div class="flex flex-col gap-y-5">
+      <h2 class="font-bold text-2xl">#Menu</h2>
+      <a routerLink="/home" routerLinkActive="pb-3 border-b-2 border-white" (click)="menuAberto = false"><span
+          class="text-gray-500">00</span> home</a>
+      <a routerLink="/destination" routerLinkActive="pb-3 border-b-2 border-white" (click)="menuAberto = false"><span
+          class="text-gray-500">01</span> destination</a>
+      <a routerLink="/crew" routerLinkActive="pb-3 border-b-2 border-white" (click)="menuAberto = false"><span
+          class="text-gray-500">02</span> crew</a>
+      <a routerLink="/technology" routerLinkActive="pb-3 border-b-2 border-white" (click)="menuAberto = false"><span
+          class="text-gray-500">03</span> technology</a>
+    </div>
+  </div>
+</div>

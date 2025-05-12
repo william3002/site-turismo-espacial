@@ -1,0 +1,54 @@
+<section class="relative w-full min-h-screen text-white pb-8 ">
+    <app-nav></app-nav>
+
+    <picture>
+        <source media="(min-width: 1024px)" srcset="background-destination-desktop.jpg">
+        <source media="(min-width: 640px)" srcset="background-destination-tablet.jpg">
+        <img src="background-destination-mobile.jpg" alt="Fundo"
+            class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+    </picture>
+
+    <div class="md:flex md:justify-center md:space-x-10 md:mt-10 lg:space-x-20 ">
+        <div>
+            <h2 class="text-center text-xl my-5 text-gray-300 md:my-0 md:text-2xl xl:text-5xl"><span
+                    class="text-gray-500">01</span> Pick your destination</h2>
+
+            <picture class="flex justify-center my-16">
+                <img class="w-52 md:w-80" [src]="destinoSelecionado.images.png" alt="">
+            </picture>
+        </div>
+
+        <div class="md:w-80 md:mt-10 xl:mt-16 xl:w-[400px]">
+            <div class="flex justify-center space-x-7 text-gray-400">
+                <button *ngFor="let item of destinos.destinations" (click)="selecionarDestino(item.name)" [ngClass]="{'text-white border-b border-white pb-1': destinoSelecionado.name === item.name,
+                        'text-gray-400': destinoSelecionado.name !== item.name}"
+                    class="uppercase tracking-widest transition-all duration-300 ease-in-out xl:text-2xl">
+                    {{ item.name }}
+                </button>
+            </div>
+
+            <div>
+                <h3 class="text-center text-4xl font-semibold my-5 md:text-start md:ps-3 xl:text-6xl xl:ps-0">
+                    {{destinoSelecionado.name}}</h3>
+
+                <p class="text-center px-3 text-gray-400 md:text-start xl:px-0 xl:ps-1 xl:text-xl">
+                    {{destinoSelecionado.description}}
+                </p>
+
+                <hr class="flex mx-auto my-6 w-80 border-gray-500 xl:w-[400px]">
+
+                <div class="text-3xl text-center space-y-5 md:space-y-0 md:space-x-4 md:flex xl:space-x-24">
+                    <p>
+                        <span class="text-gray-400 text-xl">Avg. distance</span> <br>
+                        {{destinoSelecionado.distance}}
+                    </p>
+
+                    <p>
+                        <span class="text-gray-400 text-xl">Est. travel time</span> <br>
+                        {{destinoSelecionado.travel}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
