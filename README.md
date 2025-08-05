@@ -1,27 +1,48 @@
-# SiteTurismoEspacial
+# ​ Site Turismo Espacial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+Uma página web temática sobre turismo espacial, criada como projeto front‑end para demonstrar habilidades em desenvolvimento de interfaces modernas, responsivas e interativas.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ​ Sobre o projeto
 
-## Code scaffolding
+Este projeto tem como objetivo apresentar uma experiência visual sobre destinos espaciais, tripulação e tecnologia relacionada. Inspirado por designs do **Frontend Mentor**, o site mostra minha capacidade de transformar layouts em páginas funcionais usando HTML, CSS e JavaScript.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## ​ Tecnologias utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- HTML5
+- JavaScript (ES6+)
+- [Angular / TailwindCss]
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ​ Funcionalidades
 
-## Running end-to-end tests
+- Layout responsivo que se adapta a telas desktop, tablet e mobile  
+- Navegação entre seções (destinos, tripulação, tecnologia)  
+- Uso de Tailwind para efeitos interativos e transições suaves  
+- Possível consumo de JSON local ou API para dados dinâmicos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## ​ Demonstração
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Foto do projeto](./public/SitedeTurismoEspacial.png)  
+
+---
+
+## ​ Como rodar o projeto localmente
+
+```bash
+# Clone este repositório
+git clone https://github.com/william3002/site-turismo-espacial.git
+
+# Acesse a pasta do projeto
+cd site-turismo-espacial
+
+# Abra o arquivo index.html no navegador
+# Ou, se teve build process:
+npm install
+npm start
